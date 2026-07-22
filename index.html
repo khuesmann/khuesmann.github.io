@@ -950,7 +950,7 @@
         <span class="mini-label"><span data-de="Lieber per E-Mail oder LinkedIn?">Prefer email or LinkedIn?</span></span>
         <div class="contact-chips">
           <a class="hv9 contact-chip" href="mailto:contact@karimhuesmann.com"><span aria-hidden="true">✉</span> contact@karimhuesmann.com</a>
-          <a class="hv9 contact-chip" href="#">LinkedIn <span class="accent" aria-hidden="true">↗</span></a>
+          <a class="hv9 contact-chip" href="https://www.linkedin.com/in/karim-huesmann/">LinkedIn <span class="accent" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </div>
@@ -966,7 +966,7 @@
           </label>
           <label class="form-field">
             <span class="form-label"><span data-de="Unternehmen">Company</span></span>
-            <input class="fc1 input" type="text" name="organization" autocomplete="organization">
+            <input class="fc1 input" type="text" name="organization" autocomplete="organization" required>
           </label>
         </div>
         <div class="form-grid">
@@ -976,8 +976,8 @@
           </label>
           <label class="form-field">
             <span class="form-label"><span data-de="Projektart">Project type</span></span>
-            <select class="fc1 input" name="project_type">
-              <option class="option-bg" data-de="Bitte wählen…">Select…</option><option class="option-bg" data-de="Technisches Assessment">Technical assessment</option><option class="option-bg" data-de="Forschungsprototyp">Research prototype</option><option class="option-bg" data-de="Computer-Vision-Pipeline">Computer vision pipeline</option><option class="option-bg" data-de="LLM / RAG-System">LLM / RAG system</option><option class="option-bg" data-de="Visualisierung / Visual Analytics">Visualization / visual analytics</option><option class="option-bg" data-de="Technical Leadership / Consulting">Technical leadership / consulting</option><option class="option-bg" data-de="Sonstiges">Other</option>
+            <select class="fc1 input" name="project_type" required>
+              <option class="option-bg" value="" data-de="Bitte wählen…" disabled selected>Select…</option><option class="option-bg" data-de="Technisches Assessment">Technical assessment</option><option class="option-bg" data-de="Forschungsprototyp">Research prototype</option><option class="option-bg" data-de="Computer-Vision-Pipeline">Computer vision pipeline</option><option class="option-bg" data-de="LLM / RAG-System">LLM / RAG system</option><option class="option-bg" data-de="Visualisierung / Visual Analytics">Visualization / visual analytics</option><option class="option-bg" data-de="Technical Leadership / Consulting">Technical leadership / consulting</option><option class="option-bg" data-de="Sonstiges">Other</option>
             </select>
           </label>
         </div>
@@ -988,7 +988,7 @@
         <div class="form-grid">
           <label class="form-field">
             <span class="form-label"><span data-de="Gewünschter Start">Expected start date</span></span>
-            <input class="fc1 input" type="text" name="start">
+            <input class="fc1 input" type="text" name="start" required>
           </label>
           <label class="form-field">
             <span class="form-label"><span data-de="Budget-Rahmen (optional)">Budget range (optional)</span></span>

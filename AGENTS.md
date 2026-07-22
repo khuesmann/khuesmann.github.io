@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [khuesmann.github.io] recent context, 2026-07-22 3:26pm GMT+2
+# [khuesmann.github.io] recent context, 2026-07-22 3:35pm GMT+2
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 24 obs (8,062t read) | 924,405t work | 99% savings
+Stats: 36 obs (13,481t read) | 1,041,487t work | 99% savings
 
 ### Jul 22, 2026
 4746 2:17p ✅ Git Push to Remote
@@ -36,6 +36,18 @@ S1008 Add karim.png as the portrait image in the portfolio site (khuesmann.githu
 4773 " 🔵 Local HTTP Server Started Successfully with Escalated Sandbox Permissions
 4774 " 🔵 Contact Form Renders Correctly in Browser — All 7 Fields Confirmed Present
 4775 3:19p 🔵 Formspark Patch Is Committed to HEAD — apply_patch Auto-Commits Changes
+4782 3:20p 🔵 User Created Second Formspark Form — New ID P1CLlTcHj Differs From Deployed ID pnZup36g5
+4783 3:26p ✅ Formspark Form ID Updated from pnZup36g5 to P1CLlTcHj in index.html
+4785 " 🔵 Form Submission Fails — Error Message Shown When Submitting at Local Dev URL
+4786 " 🔵 Diagnostic curl Probe: Formspark P1CLlTcHj Returns HTTP 200 With CORS Wildcard — Endpoint Valid
+4784 " 🔵 Form ID Change Is Staged as Unstaged Working-Tree Modification — Not Yet Committed
+4787 3:31p 🔵 ROOT CAUSE FOUND: Browser Tab Has OLD Form ID pnZup36g5, Not P1CLlTcHj
+4789 " 🔵 Browser Automation Dead End — Local Tab Persistently Absent, Server Still Down
+4788 3:33p 🔵 Local Dev Server Down (HTTP 000) — Local Tab Gone — User Tested on Live Site With Old Form ID
+4790 3:34p 🔵 Python HTTP Server Launched on Port 4173 But curl Still Returns HTTP 000 — Server Startup Race
+4791 " 🔵 Local Python Server Now Running — Serves Corrected Form ID P1CLlTcHj at Line 958
+4792 " 🔵 index.html Form ID Change Is Now Committed — Git Status Shows Only AGENTS.md as Modified
+4793 " 🔵 P1CLlTcHj Already Committed AND Pushed — origin/master = HEAD = "email form" Commit
 
-Access 924k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 1041k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>
