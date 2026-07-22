@@ -949,18 +949,20 @@
       <div class="contact-alt">
         <span class="mini-label"><span data-de="Lieber per E-Mail oder LinkedIn?">Prefer email or LinkedIn?</span></span>
         <div class="contact-chips">
-          <a class="hv9 contact-chip" href="mailto:karxxm@googlemail.com"><span aria-hidden="true">✉</span> karxxm@googlemail.com</a>
+          <a class="hv9 contact-chip" href="mailto:contact@karimhuesmann.com"><span aria-hidden="true">✉</span> contact@karimhuesmann.com</a>
           <a class="hv9 contact-chip" href="#">LinkedIn <span class="accent" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </div>
     <div data-reveal="">
-      <form class="form-card" id="contact-form">
-        <div class="form-sent-box" id="form-sent" hidden><span data-de="Danke. Das Formular ist noch ein Platzhalter und versendet nicht. Bitte erreichen Sie mich direkt per E-Mail.">Thanks. The form is a placeholder and does not send yet. Please reach me directly at the email address on this page.</span></div>
+      <form class="form-card" id="contact-form" action="https://submit-form.com/pnZup36g5" method="POST">
+        <input class="form-honeypot" type="checkbox" name="_honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-sent-box" id="form-sent" role="status" tabindex="-1" hidden><span data-de="Danke. Ihre Nachricht wurde gesendet. Ich melde mich so bald wie möglich bei Ihnen.">Thanks. Your message has been sent. I will get back to you as soon as possible.</span></div>
+        <div class="form-error-box" id="form-error" role="alert" tabindex="-1" hidden><span data-de="Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt per E-Mail.">Your message could not be sent. Please try again or contact me directly by email.</span></div>
         <div class="form-grid">
           <label class="form-field">
             <span class="form-label">Name</span>
-            <input class="fc1 input" type="text" name="name" autocomplete="name">
+            <input class="fc1 input" type="text" name="name" autocomplete="name" required>
           </label>
           <label class="form-field">
             <span class="form-label"><span data-de="Unternehmen">Company</span></span>
@@ -970,7 +972,7 @@
         <div class="form-grid">
           <label class="form-field">
             <span class="form-label"><span data-de="E-Mail">Email</span></span>
-            <input class="fc1 input" type="email" name="email" autocomplete="email">
+            <input class="fc1 input" type="email" name="email" autocomplete="email" required>
           </label>
           <label class="form-field">
             <span class="form-label"><span data-de="Projektart">Project type</span></span>
@@ -981,7 +983,7 @@
         </div>
         <label class="form-field">
           <span class="form-label"><span data-de="Projektbeschreibung">Project description</span></span>
-          <textarea class="fc1 textarea" rows="4" name="message"></textarea>
+          <textarea class="fc1 textarea" rows="4" name="message" required></textarea>
         </label>
         <div class="form-grid">
           <label class="form-field">
@@ -996,7 +998,11 @@
           </label>
         </div>
         <div class="form-actions">
-          <button class="hv3 btn-submit" type="submit"><span data-de="Projekt besprechen">Discuss your project</span> <span aria-hidden="true">→</span></button>
+          <button class="hv3 btn-submit" type="submit">
+            <span class="submit-label" data-de="Projekt besprechen">Discuss your project</span>
+            <span class="submit-progress" data-de="Wird gesendet…">Sending…</span>
+            <span class="submit-arrow" aria-hidden="true">→</span>
+          </button>
           <a class="hv7 link-plain" href="#"><span data-de="Kennenlern-Call vereinbaren">Schedule an introductory call</span></a>
         </div>
       </form>
@@ -1101,10 +1107,43 @@
     document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
   } catch (e) {}
 
-  /* ---- contact form (demo: shows the notice, does not send) ---- */
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
+  /* ---- contact form ---- */
+  var contactForm = document.getElementById('contact-form');
+  var formSent = document.getElementById('form-sent');
+  var formError = document.getElementById('form-error');
+  var submitButton = contactForm.querySelector('[type="submit"]');
+
+  contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    document.getElementById('form-sent').hidden = false;
+    formSent.hidden = true;
+    formError.hidden = true;
+    submitButton.disabled = true;
+    submitButton.classList.add('is-submitting');
+    submitButton.setAttribute('aria-busy', 'true');
+
+    try {
+      var response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      });
+
+      if (!response.ok) throw new Error('Form submission failed with status ' + response.status);
+
+      contactForm.reset();
+      formSent.hidden = false;
+      formSent.focus();
+    } catch (error) {
+      formError.hidden = false;
+      formError.focus();
+    } finally {
+      submitButton.disabled = false;
+      submitButton.classList.remove('is-submitting');
+      submitButton.setAttribute('aria-busy', 'false');
+    }
   });
 
   /* ---- canvas visualizations (identical drawing code to the original) ---- */

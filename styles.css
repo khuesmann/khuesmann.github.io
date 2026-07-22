@@ -496,6 +496,9 @@ input::placeholder,textarea::placeholder{color:#6a6355}
 .contact-chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#1c1810;padding:11px 16px;border:1px solid rgba(0,0,0,.16);border-radius:9px;text-decoration:none;transition:border-color .18s}
 .form-card{border:1px solid rgba(0,0,0,.12);border-radius:16px;background:linear-gradient(180deg,#fdfbf5,#f4efe3);padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:18px}
 .form-sent-box{padding:14px 16px;background:rgba(232,162,74,.09);border:1px solid rgba(232,162,74,.3);border-radius:10px;font-size:13.5px;line-height:1.5;color:#6d5a2c}
+.form-error-box{padding:14px 16px;background:rgba(168,55,55,.07);border:1px solid rgba(168,55,55,.28);border-radius:10px;font-size:13.5px;line-height:1.5;color:#7f2e2e}
+.form-sent-box:focus,.form-error-box:focus{outline:2px solid currentColor;outline-offset:2px}
+.form-honeypot{display:none}
 .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
 .form-field{display:flex;flex-direction:column;gap:7px}
 .form-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#6f6656}
@@ -504,6 +507,10 @@ input::placeholder,textarea::placeholder{color:#6a6355}
 .option-bg{background:#fffdf8}
 .form-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:4px}
 .btn-submit{display:inline-flex;align-items:center;gap:8px;background:#e8a24a;color:#2a1d06;font-weight:600;font-size:15px;line-height:1;padding:14px 24px;border-radius:10px;border:1px solid #e8a24a;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
+.btn-submit:disabled{cursor:wait;opacity:.72;transform:none}
+.submit-progress{display:none}
+.btn-submit.is-submitting .submit-label,.btn-submit.is-submitting .submit-arrow{display:none}
+.btn-submit.is-submitting .submit-progress{display:inline}
 .link-plain{font-size:14px;color:#4a4436;text-decoration:none;border-bottom:1px solid rgba(0,0,0,.28);padding-bottom:2px}
 
 /* ---- footer ---- */
