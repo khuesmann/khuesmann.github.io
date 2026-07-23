@@ -468,6 +468,10 @@ html{scroll-behavior:smooth}
 .form-reassure{margin:0;font-size:12.5px;line-height:1.45;color:#7a7060}
 .cv-cta-row{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .cv-cta-text{margin:0;font-size:14px;line-height:1.55;color:#4a4436;max-width:520px}
+.hero-micro{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:#8d8574;margin:14px 0 0}
+.service-title-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.project-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.project-media-caption{position:absolute;left:14px;bottom:12px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:rgba(234,247,251,.82);background:rgba(19,18,16,.55);padding:3px 7px;border-radius:5px;backdrop-filter:blur(2px)}
 @media (prefers-reduced-motion: no-preference){.form-swap{animation:khFieldSwap .2s cubic-bezier(.2,.7,.2,1)}}
 @keyframes khFieldSwap{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 .project-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:16px}
