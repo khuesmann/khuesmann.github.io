@@ -423,6 +423,53 @@ input::placeholder,textarea::placeholder{color:#6a6355}
 .media-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 10px,transparent 10px 20px)}
 .media-placeholder-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#7a7060;text-align:center;padding:0 18px}
 .project-num-badge{position:absolute;top:12px;left:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#a76c15;background:rgba(19,18,16,.6);padding:3px 7px;border-radius:5px}
+.project-extra{display:none}
+.projects-more-row{margin-top:26px;display:flex;justify-content:center}
+.projects-more-row .btn-secondary{cursor:pointer}
+
+/* ---- stats strip ---- */
+.stats-strip{background:#f2f1ea;border-top:1px solid rgba(0,0,0,.08);padding:clamp(24px,3vw,36px) 0}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px 32px}
+.stat-cell{display:flex;flex-direction:column;gap:5px}
+.stat-num{font-family:'IBM Plex Mono',monospace;font-size:clamp(22px,2.4vw,30px);line-height:1;color:#a76c15}
+.stat-label{font-size:12.5px;line-height:1.45;color:#6f6656}
+
+/* ---- career timeline ---- */
+.timeline-wrap{max-width:1200px;margin:clamp(40px,5vw,64px) auto 0;padding:0 clamp(18px,5vw,64px)}
+.timeline{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 10px}
+.tl-node{display:flex;align-items:center;gap:8px}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:#a76c15;flex:none}
+.tl-label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.02em;color:#6f6656;white-space:nowrap}
+.tl-arrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#a76c15}
+.tl-node:last-child{background:#1c1810;border-radius:999px;padding:7px 14px}
+.tl-node:last-child .tl-dot{background:#e8a24a}
+.tl-node:last-child .tl-label{color:#f2ede1}
+.portrait-caption{margin:10px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#7a7060}
+
+/* ---- collapsible tech table ---- */
+.tech-collapsed{display:none}
+.tech-more-row{margin-top:32px}
+
+/* ---- smooth anchor scrolling (motion-safe) ---- */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+/* ---- intent-driven contact form ---- */
+.intent-set{border:0;padding:0;margin:0}
+.intent-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.intent-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.02em;color:#6f6656;background:#fffdf8;border:1px solid rgba(0,0,0,.16);border-radius:999px;padding:10px 15px;cursor:pointer;transition:border-color .18s,background .18s,color .18s}
+.intent-btn:hover{border-color:rgba(232,162,74,.6)}
+.intent-btn.is-active{background:#1c1810;border-color:#1c1810;color:#f2ede1}
+.intent-btn:focus-visible{outline:2px solid #a76c15;outline-offset:2px}
+.form-fields{display:flex;flex-direction:column;gap:18px}
+.form-intent-note{margin:0;font-size:13px;line-height:1.5;color:#6d5a2c;background:rgba(232,162,74,.08);border:1px solid rgba(232,162,74,.25);border-radius:10px;padding:11px 14px}
+.form-more-btn{align-self:flex-start;background:none;border:none;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:#a76c15;padding:0 0 2px;border-bottom:1px dashed rgba(167,108,21,.5)}
+.form-more-btn:focus-visible{outline:2px solid #a76c15;outline-offset:2px}
+.form-reassure{margin:0;font-size:12.5px;line-height:1.45;color:#7a7060}
+.cv-cta-row{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.cv-cta-text{margin:0;font-size:14px;line-height:1.55;color:#4a4436;max-width:520px}
+@media (prefers-reduced-motion: no-preference){.form-swap{animation:khFieldSwap .2s cubic-bezier(.2,.7,.2,1)}}
+@keyframes khFieldSwap{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 .project-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:16px}
 .project-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;line-height:1.2;margin:0;color:#1c1810}
 .project-rows{display:flex;flex-direction:column;gap:11px}
