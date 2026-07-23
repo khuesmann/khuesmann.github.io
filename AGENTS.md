@@ -1,24 +1,15 @@
 <claude-mem-context>
 # Memory Context
 
-# [khuesmann.github.io] recent context, 2026-07-23 5:00pm GMT+2
+# [khuesmann.github.io] recent context, 2026-07-23 9:45pm GMT+2
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 50 obs (24,369t read) | 2,033,021t work | 99% savings
+Stats: 50 obs (25,606t read) | 2,759,582t work | 99% savings
 
 ### Jul 22, 2026
-4769 3:08p 🟣 Portrait Image Added and Pushed to Remote
-4771 " 🔵 Portfolio Site Structure Confirmed — Local Dev Server at Port 8899
-4798 " 🟣 Engineering Highlights Section — Content Ready for index.html Integration
-4800 3:09p 🔵 styles.css Structure Confirmed: Stray HTML at Lines 3–9 Before Real CSS
-4770 3:10p 🔵 Portrait Implementation Verified on Remote — karim.jpg Referenced, karim.png Also Tracked
-4772 3:18p 🔵 Formspark Form ID pnZup36g5 Confirmed by User
-4773 " 🔵 Local HTTP Server Started Successfully with Escalated Sandbox Permissions
-4774 " 🔵 Contact Form Renders Correctly in Browser — All 7 Fields Confirmed Present
-4775 3:19p 🔵 Formspark Patch Is Committed to HEAD — apply_patch Auto-Commits Changes
 4782 3:20p 🔵 User Created Second Formspark Form — New ID P1CLlTcHj Differs From Deployed ID pnZup36g5
 4783 3:26p ✅ Formspark Form ID Updated from pnZup36g5 to P1CLlTcHj in index.html
 4785 " 🔵 Form Submission Fails — Error Message Shown When Submitting at Local Dev URL
@@ -36,7 +27,6 @@ Stats: 50 obs (24,369t read) | 2,033,021t work | 99% savings
 4797 3:36p 🔵 apply_patch Did NOT Auto-Commit — Form Validation Changes Are Unstaged Working-Tree Modifications
 4799 8:15p 🔵 index.html Section Map — Projects Section Structure Confirmed
 4804 8:19p 🟣 Comprehensive Portfolio Refinement Prompt Received
-S1012 Second portfolio refinement round submitted (15-point plan) — interactive visualization + final polish targeting the last 5–10% gap (Jul 22 at 10:08 PM)
 4805 10:10p ✅ Portfolio Website Refinement Task Initiated
 4806 10:13p ⚖️ Portfolio Website Refinement Plan Initiated
 4807 " ⚖️ Second Portfolio Refinement Round — Interactive Visualization + Final Polish
@@ -70,23 +60,17 @@ S1018 Continue portfolio site development — implement and verify intent-based 
 4828 " ⚖️ Portfolio website copy and structure overhaul requested — $200+/hr tier positioning
 4829 2:01a ⚖️ Portfolio Website Copywriting & UX Redesign Initiated
 S1019 Portfolio website comprehensive copy and UX overhaul requested — $200+/hr tier positioning for elite technical freelance AI engineer (Jul 23 at 2:02 AM)
-S1020 Portfolio website copy and UX rewrite for karimhuesmann.com — implementing $200+/hr technical consultant positioning with engagement model restructuring, hero value proposition sharpening, and bilingual (EN/DE) support (Jul 23 at 10:46 AM)
-**Investigated**: The live local site was inspected via browser automation at http://127.0.0.1:8899/index.html — current state of hero subheadline, CTA micro-copy, services section eyebrow/title/rows/tags, and navigation labels were extracted in both English and German language variants. The Engagement Models section, individual row labels, duration tags, and nav copy were all verified as implemented and rendering correctly in the browser.
+S1020 Portfolio website copy and UX rewrite for karimhuesmann.com — implementing $200+/hr technical consultant positioning with engagement model restructuring, hero value proposition sharpening, and bilingual (EN/DE) support (Jul 23 at 10:41 AM)
+4830 5:00p ✅ Smoke Detector Maintenance Letter Simplified
+4831 " 🔵 Codex Documents Skill Loaded for DOCX Generation
+4832 5:01p 🔵 rauchmelder_vertrag1.docx Content Fully Extracted
+4833 5:02p 🔵 Original Contract Visually Confirmed as 6-Page Formal Legal Document
+4834 " 🔵 Python Script Written to Generate Simplified Rauchmelder Confirmation Letter
+4836 " ✅ User Requests Addition of Initial Acquisition Cost Clause to Letter
+4835 5:04p 🔵 Simplified Letter DOCX Successfully Generated, Audited, and Delivered
+4837 9:41p ✅ Primary Session Regenerated Base DOCX Twice Without Cost Clause; Now Loading Dependencies to Add It
+4838 " ✅ Cost Clause Successfully Added to Bestaetigung_Rauchmelderwartung.docx — Task Complete
+S1021 Add cost reimbursement clause to Bestaetigung_Rauchmelderwartung.docx — user requested: "Vielleicht ergänzen wir noch, dass wir die initialen kosten für anschaffungen übernehmen, diese dann aber von dem Vermieter getragen werden müssen" (Jul 23 at 9:41 PM)
 
-**Learned**: The site at /Users/karim/Projects/khuesmann.github.io is a bilingual static site (EN/DE toggle via #btn-en/#btn-de buttons). The #services anchor is preserved to avoid breaking links while the nav label was updated to "Engagements" (EN) / "Zusammenarbeit" (DE). The case study section already uses an honest Challenge → Engineering → My contribution → Outcome structure with no vanity metrics. The publication/research section already has 6 DOI-linked papers with venue chips. Three case study cards (02/05/06) have styled placeholder slots for architecture diagrams. Both index.html and styles.css have been modified but not committed.
-
-**Completed**: - Hero subheadline reframed: "I take AI from research prototype to production: Computer Vision, medical AI, and LLM systems for teams whose problems don't fit standard tools — delivered as tested, maintainable software."
-    - CTA micro-copy added: "Intro call ≈ 30 minutes · reply within 24–48 hours · no commitment"
-    - Services section renamed to "Engagement Models" with eyebrow "Engagement Models" and title "Three ways we can work together"
-    - Three engagement formats implemented with duration tags: Advisory & Feasibility Audit (1–2 weeks), Core Implementation & Lead AI Engineering (Project-based), Research-to-Production Retainer (A few days per month)
-    - Persona targeting copy added: biotech/medical-device companies, scientific labs, enterprise R&D groups
-    - Nav labels updated from "Services" → "Engagements" (EN) / "Zusammenarbeit" (DE) in header, mobile menu, footer
-    - Changes are live in index.html and styles.css (modified, uncommitted per git status)
-    - Full section-by-section copy recommendations delivered to the user
-    - Structural UI recommendations ranked by priority
-
-**Next Steps**: User was asked whether to commit and push all accumulated changes (hero, stats, projects rework, collapsible stack, timeline, intent form, CV journey, and this copy round) to the repository. Awaiting confirmation to git commit and push index.html + styles.css.
-
-
-Access 2033k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 2760k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>
