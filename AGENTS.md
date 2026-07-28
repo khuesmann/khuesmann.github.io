@@ -1,7 +1,7 @@
 <claude-mem-context>
 # Memory Context
 
-# [khuesmann.github.io] recent context, 2026-07-23 9:45pm GMT+2
+# [khuesmann.github.io] recent context, 2026-07-23 9:56pm GMT+2
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
@@ -30,10 +30,7 @@ Stats: 50 obs (25,606t read) | 2,759,582t work | 99% savings
 4805 10:10p ✅ Portfolio Website Refinement Task Initiated
 4806 10:13p ⚖️ Portfolio Website Refinement Plan Initiated
 4807 " ⚖️ Second Portfolio Refinement Round — Interactive Visualization + Final Polish
-S1011 Portfolio website refinement — elevate Karim's AI engineering portfolio from excellent to top-tier, implementing 15-point UX/copy/conversion improvement plan across index.html and styles.css (Jul 22 at 10:13 PM)
-S1013 Second portfolio refinement round — round 2 beginning with canvas/visualization code investigation as precursor to interactive visualization feature (Jul 22 at 10:15 PM)
 4809 10:19p ✅ Round 2 Hero + Stats Strip Edits Applied to index.html
-S1015 Adaptive intent-driven contact section redesign for khuesmann.github.io — replacing the static form with an intent-card flow per visitor goal (New AI Project, Freelance Availability, Request CV, Research Collaboration, Something Else) (Jul 22 at 10:19 PM)
 4808 10:20p 🔵 Existing Canvas Visualization Architecture in index.html
 4810 10:21p ⚖️ Portfolio Final Refinement Plan (15-Point Spec)
 4811 10:22p ⚖️ AI Engineering Portfolio Refinement Plan — 15-Point Specification
@@ -61,6 +58,7 @@ S1018 Continue portfolio site development — implement and verify intent-based 
 4829 2:01a ⚖️ Portfolio Website Copywriting & UX Redesign Initiated
 S1019 Portfolio website comprehensive copy and UX overhaul requested — $200+/hr tier positioning for elite technical freelance AI engineer (Jul 23 at 2:02 AM)
 S1020 Portfolio website copy and UX rewrite for karimhuesmann.com — implementing $200+/hr technical consultant positioning with engagement model restructuring, hero value proposition sharpening, and bilingual (EN/DE) support (Jul 23 at 10:41 AM)
+S1021 Add cost reimbursement clause to Bestaetigung_Rauchmelderwartung.docx — user requested: "Vielleicht ergänzen wir noch, dass wir die initialen kosten für anschaffungen übernehmen, diese dann aber von dem Vermieter getragen werden müssen" (Jul 23 at 10:46 AM)
 4830 5:00p ✅ Smoke Detector Maintenance Letter Simplified
 4831 " 🔵 Codex Documents Skill Loaded for DOCX Generation
 4832 5:01p 🔵 rauchmelder_vertrag1.docx Content Fully Extracted
@@ -70,7 +68,48 @@ S1020 Portfolio website copy and UX rewrite for karimhuesmann.com — implementi
 4835 5:04p 🔵 Simplified Letter DOCX Successfully Generated, Audited, and Delivered
 4837 9:41p ✅ Primary Session Regenerated Base DOCX Twice Without Cost Clause; Now Loading Dependencies to Add It
 4838 " ✅ Cost Clause Successfully Added to Bestaetigung_Rauchmelderwartung.docx — Task Complete
-S1021 Add cost reimbursement clause to Bestaetigung_Rauchmelderwartung.docx — user requested: "Vielleicht ergänzen wir noch, dass wir die initialen kosten für anschaffungen übernehmen, diese dann aber von dem Vermieter getragen werden müssen" (Jul 23 at 9:41 PM)
+S1023 Add room locations for five smoke detectors to Bestaetigung_Rauchmelderwartung.docx — full workflow completed (Jul 23 at 9:41 PM)
+S1022 Add room locations for smoke detectors to Bestaetigung_Rauchmelderwartung.docx — new user request after prior cost-clause update (Jul 23 at 9:44 PM)
+S1024 New user request to create an expanded version of the Rauchwarnmelder confirmation letter with Eckpunkte (key points) bullet list summarizing the landlord contract terms (Jul 23 at 9:48 PM)
+**Investigated**: Primary session loaded the documents skill, read the landlord's contract (`/Users/karim/Downloads/rauchmelder_vertrag1.docx`) at key paragraph indices to extract relevant contract clauses, and read task docs (create_edit.md, verify_render.md) in parallel.
+
+    Key contract paragraphs examined (indices 12, 16, 17, 19, 21, 22, 25, 28, 29, 31, 33, 36, 40, 46, 48):
+    - §1: Tenant takes over maintenance from 01.08.2026, 5 smoke detectors
+    - §1: Annual function test each August via test button
+    - §2: Documentation of each test with date and result
+    - §4: Defects/weak batteries reported within 7 days via messenger
+    - §5: Batteries procured by tenant, costs covered by landlord (with receipt)
+    - §5: Replacement devices procured and installed by tenant, costs covered by landlord
+    - §5: No rent/purchase/replacement costs imposed on tenant
+    - §6: Previous external annual inspection eliminated; no Nebenkosten surcharge from 01.08.2026 on
+    - §7: Tenant liable only for willful/negligent violation of maintenance duties
+    - §9: Agreement starts 01.08.2026
+    - §9: Tenant can revoke with 3 months notice; landlord resumes responsibility after termination
+
+**Learned**: - The original confirmation letter is at `/Users/karim/Projects/khuesmann.github.io/Bestaetigung_Rauchmelderwartung.docx`
+    - The landlord's full contract is at `/Users/karim/Downloads/rauchmelder_vertrag1.docx`
+    - The new "mit Eckpunkten" version copies the original and adds a bold lead paragraph + 7 bullet points
+    - Section audit: A4 portrait (8.27×11.69 in), 0.98 in margins, 1 section
+    - Paragraph structure confirmed: 17 paragraphs total (indices 0-16), bullets use "List Bullet" style (numbered=False, meaning no numPr — pure bullet style)
+    - Render output: /private/tmp/rauchmelder_eckpunkte_render_1/page-1.png — clean single page confirmed
+    - The `.codex_tmp_add_rauchmelder_rooms.py` script (from previous task) was also deleted in this session turn
+
+**Completed**: - New document created: `/Users/karim/Projects/khuesmann.github.io/Bestaetigung_Rauchmelderwartung_mit_Eckpunkten.docx`
+    - Script `.codex_tmp_create_rauchmelder_eckpunkte.py` created, run (exit 0), and the document saved
+    - Render QA passed (exit 0, page-1.png viewed, single page clean layout)
+    - Structure confirmed: 17 paragraphs with 7 bullet points (Eckpunkte):
+      1. Rauchwarnmelder locations (Wohnzimmer, Flur, Schlafzimmer, Büro, Kinderzimmer)
+      2. Annual August function test via Prüftaste
+      3. Documentation of tests; timely reporting of defects/weak batteries
+      4. Battery/replacement device costs covered by landlord against receipt
+      5. No expert maintenance/repairs taken over by tenant
+      6. Previous external inspection eliminated; no Nebenkosten charge from 01.08.2026
+      7. Right to revoke with 3 months notice; landlord resumes responsibility
+    - Script `.codex_tmp_create_rauchmelder_eckpunkte.py` left on disk (not yet cleaned up — visible in apply_patch log)
+    - The rooms temp script `.codex_tmp_add_rauchmelder_rooms.py` deleted (from previous task)
+
+**Next Steps**: The primary session is likely delivering the final response to the user, citing the new DOCX file. The temp script `.codex_tmp_create_rauchmelder_eckpunkte.py` may still need cleanup (not confirmed deleted yet in this turn). No further work appears pending unless the user requests further edits.
+
 
 Access 2760k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>

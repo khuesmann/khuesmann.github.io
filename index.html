@@ -1582,11 +1582,14 @@
   /* ---- projects: reveal the non-featured case studies ---- */
   var moreBtn = document.getElementById('projects-toggle');
   if (moreBtn) moreBtn.addEventListener('click', function () {
+    var grid = document.querySelector('.projects-grid');
+    if (grid) grid.classList.add('projects-expanded');
     document.querySelectorAll('.project-extra').forEach(function (card) {
       card.classList.remove('project-extra');
-      card.querySelectorAll('.card-viz').forEach(drawViz);
     });
     moreBtn.closest('.projects-more-row').remove();
+    /* the grid just went from 3-up to 5-up, so every canvas has a new box */
+    document.querySelectorAll('.projects-grid .card-viz').forEach(drawViz);
   });
 
   /* ---- technologies: expand the collapsed stack table ---- */
