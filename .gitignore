@@ -1,5 +1,27 @@
-# personal documents / scratch — never publish from this repo
-Rauchmelder_Bestaetigung_*.docx
-Bestaetigung_Rauchmelderwartung.docx
-.codex_tmp_*
+# This repo root IS the public web root (GitHub Pages -> karimhuesmann.com).
+# Anything committed here becomes a public URL. Personal documents should never
+# be generated into this directory in the first place; these rules are only a
+# second line of defence.
+
+# office / document formats — none are part of the site
+*.doc
+*.docx
+*.odt
+*.rtf
+*.pdf
+*.xls
+*.xlsx
+*.ods
+*.ppt
+*.pptx
+*.pages
+*.numbers
+
+# Word/Office lock files (e.g. ~$staetigung_Rauchmelderwartung.docx)
 ~$*
+
+# agent / tooling scratch
+.codex_tmp_*
+
+# macOS
+.DS_Store
